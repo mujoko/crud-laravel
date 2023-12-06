@@ -16,7 +16,7 @@ class mahasiswaController extends Controller
         $jumlahbaris = 4;
         if (strlen($katakunci)) {
             $data = mahasiswa::where('nim', 'like', '%'.$katakunci.'%')
-                ->orWhere('nama', 'like','%'.$katakunci.'%')
+                
                 ->orWhere('jurusan', 'like','%'.$katakunci.'%')
                 ->paginate($jumlahbaris);
 
